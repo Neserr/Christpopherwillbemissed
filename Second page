@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Riddle Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
 
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .equation-container {
+      margin: 40px auto;
+      padding: 20px;
+      border: 2px solid #000000;
+      display: inline-block;
+    }
+
+    .equation {
+      font-size: 24px;
+    }
+
+    .input-container {
+      margin-top: 20px;
+    }
+
+    .input-box {
+      padding: 10px;
+      width: 200px;
+      font-size: 18px;
+    }
+
+    .submit-btn {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    #error-message {
+      color: red;
+      margin-top: 20px;
+    }
+
+    #counter {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Solve the Equation</h1>
+    <div class="equation-container">
+      <p class="equation">((4! / 2) - (3 x 2)) + (√36 - 6) = x</p>
+    </div>
+    <div class="input-container">
+      <input type="text" class="input-box" id="answer-input" placeholder="Enter your answer">
+      <button class="submit-btn" onclick="checkAnswer()">Submit</button>
+    </div>
+    <p id="error-message"></p>
+    <p id="counter"></p>
+  </div>
+
+  <script>
+    var wrongAnswerCount = 0;
+
+    function checkAnswer() {
+      var answerInput = document.getElementById('answer-input').value;
+      var errorMessage = document.getElementById('error-message');
+      var counter = document.getElementById('counter');
+
+      if (answerInput == 6) {
+        window.location.href = 'next_page.html';
+      } else {
+        wrongAnswerCount++;
+        errorMessage.textContent = 'Try harder';
+        counter.textContent = 'Wrong answers given: ' + wrongAnswerCount;
+      }
+    }
+  </script>
+</body>
+</html>
