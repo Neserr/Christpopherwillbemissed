@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Your Website</title>
+  <style>
+    body {
+      background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg");
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: #ffffff;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 10px;
+      width: 100px;
+    }
+
+    .btn-green {
+      background-color: #2ecc71;
+    }
+
+    .btn-red {
+      background-color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>I want to play a game</h1>
+    <h2>Welcome Christopher</h2>
+    <p>Ein Rätselspiel beginnt, ganz geschwind,</p>
+    <p>Keine leichte Aufgabe, das sei geschwind.</p>
+    <p>Ein Rätsel nach dem anderen, Tag für Tag,</p>
+    <p>Bist du bereit? Keine Zeit, verschieb es nicht, sag!</p>
+    <div class="question">
+      <p>Willst du mitspielen?</p>
+      <button class="btn btn-green" onclick="window.location.href='next_page.html'">Ja</button>
+      <button class="btn btn-red" onclick="window.location.href='next_page.html'">Nein</button>
+    </div>
+  </div>
+</body>
+</html>
